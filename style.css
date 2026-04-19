@@ -56,6 +56,44 @@ nav ul li a.active {
   border-bottom: 3px solid #fff;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: auto;
+}
+
+@media (max-width: 680px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li.site-title {
+    flex: 1;
+  }
+
+  nav ul li:not(.site-title) {
+    display: none;
+    width: 100%;
+  }
+
+  nav ul.open li:not(.site-title) {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
 /* ===== Main Content ===== */
 main {
   flex: 1;
